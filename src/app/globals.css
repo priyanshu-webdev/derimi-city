@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+@theme {
+  /* === Core Palette === */
+  --color-primary-gold:       #B8952A;
+  --color-primary-gold-light: #D4AF5A;
+  /* Removed unused: --color-primary-gold-muted, --color-primary-surface, --color-primary-green */
+
+  --color-primary-black:   #0D0C0B;
+  --color-primary-charcoal:#1A1917;
+  --color-primary-footer:  #0A0908; /* 7B: design token replaces hardcoded hex in Footer */
+  --color-primary-white:   #FAFAF8;
+  --color-primary-cream:   #F2EDE3;
+
+  /* === Canonical grey scale (3 levels) === */
+  --color-primary-gray:       #A8A49E; /* body text */
+  --color-primary-gray-light: #D4CFC8; /* labels */
+
+  /* === Typography === */
+  --font-sans:  var(--font-inter);
+  --font-serif: var(--font-playfair);
+
+  /* === Animations === */
+  --animate-fade-in:  fade-in 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-slide-up: slide-up 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-ticker:   ticker 30s linear infinite;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-33.333%); } /* 7C: Updated for tripled items */
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-primary-black text-primary-white;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  }
+
+  ::selection {
+    background: rgba(184, 149, 42, 0.25);
+    color: #FAFAF8;
+  }
+
+  /* Gold focus ring for keyboard navigation */
+  :focus-visible {
+    outline: 2px solid #B8952A;
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+/* === Scrollbar === */
+::-webkit-scrollbar       { width: 6px; }
+::-webkit-scrollbar-track { background: #0D0C0B; }
+::-webkit-scrollbar-thumb {
+  background: #3A3328;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover { background: #B8952A; }
+
+/* === Utility classes === */
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Grain texture overlay */
+.grain {
+  position: relative;
+}
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  background-size: 256px;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.5;
+}
+
+/* === Gold rule utilities === */
+.gold-rule {
+  height: 1px;
+  background: linear-gradient(to right, transparent, #B8952A, transparent);
+}
+
+.gold-rule-left {
+  height: 1px;
+  background: linear-gradient(to right, #B8952A, transparent);
+}
+
+/* 7C: Canonical gold opacity scale — 4 levels only
+   /20  ghost (decorative borders, hover rings)
+   /40  subtle (icons at rest, dividers)
+   /60  medium (labels, secondary text)
+   /80  strong (active states, primary labels)
+   Full opacity for CTA buttons only.
+   All intermediate values (/10, /30, /50, /70) to be avoided in future additions. */
