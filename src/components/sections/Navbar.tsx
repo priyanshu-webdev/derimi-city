@@ -126,7 +126,11 @@ export function Navbar() {
 
             {/* Desktop CTA */}
             <div className="hidden lg:flex items-center gap-4">
-              <Button variant="ghost-gold" size="sm" className="text-[10px] tracking-widest">
+              <Button
+                variant="outline"
+                size="sm"
+                className="text-[10px] tracking-widest border-primary-gold/40 text-primary-gold/80 hover:border-primary-gold hover:text-primary-gold hover:bg-primary-gold/5 transition-all duration-300"
+              >
                 Download Brochure
               </Button>
               <Button variant="gold" size="sm">

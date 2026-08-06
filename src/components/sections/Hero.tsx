@@ -23,7 +23,7 @@ export function Hero() {
     <section
       id="home"
       ref={ref}
-      className="relative h-screen min-h-[700px] max-h-[1080px] overflow-hidden flex flex-col"
+      className="relative min-h-screen h-[100svh] min-h-[760px] max-h-[1100px] overflow-hidden flex flex-col"
       aria-label="Hero"
     >
       {/* === Background === */}
@@ -41,11 +41,12 @@ export function Hero() {
           priority
           className="object-cover"
         />
-        {/* Soft, deep vignette — Awwwards style, non-intrusive */}
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-black/95 via-primary-black/50 to-primary-black/10" />
-        <div className="absolute inset-0 bg-gradient-to-t from-primary-black via-primary-black/10 to-transparent" />
+        {/* Left-side deep vignette for text legibility */}
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-black/[0.97] via-primary-black/60 to-primary-black/20" />
+        {/* Bottom vignette */}
+        <div className="absolute inset-0 bg-gradient-to-t from-primary-black via-primary-black/20 to-transparent" />
         {/* Subtle warm gold tone */}
-        <div className="absolute inset-0 bg-primary-gold/[0.04] mix-blend-overlay" />
+        <div className="absolute inset-0 bg-primary-gold/[0.03] mix-blend-overlay" />
       </motion.div>
 
       {/* === Main Content === */}
@@ -53,7 +54,8 @@ export function Hero() {
         className="relative z-10 flex-1 flex flex-col justify-center"
         style={{ y: contentY, opacity }}
       >
-        <div className="container mx-auto px-6 md:px-12 max-w-7xl pt-24">
+        {/* Indented to move content away from left edge */}
+        <div className="container mx-auto px-8 md:px-16 lg:px-24 max-w-7xl pt-24">
           <div className="max-w-2xl xl:max-w-3xl">
 
             {/* Eyebrow */}
@@ -69,40 +71,52 @@ export function Hero() {
               </span>
             </motion.div>
 
-            {/* Main Heading — weight contrast */}
+            {/* Main Heading — uppercase, wide tracking, premium editorial scale */}
             <motion.h1
-              initial={{ opacity: 0, y: 24 }}
+              initial={{ opacity: 0, y: 28 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.1, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
-              className="font-serif leading-[1.0] tracking-tight mb-8"
+              transition={{ duration: 1.1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+              className="font-serif leading-[1.0] mb-8"
             >
-              <span className="block text-6xl md:text-8xl xl:text-[9rem] font-light text-primary-white/90">
+              <span className="block text-[4.5rem] sm:text-7xl md:text-[8rem] xl:text-[9.5rem] font-light text-white/95 uppercase tracking-[0.08em]">
                 Derimi
               </span>
-              <span className="block text-6xl md:text-8xl xl:text-[9rem] font-semibold text-primary-gold">
+              <span className="block text-[4.5rem] sm:text-7xl md:text-[8rem] xl:text-[9.5rem] font-bold text-primary-gold uppercase tracking-[0.08em]">
                 City
               </span>
             </motion.h1>
 
-            {/* Sub-copy */}
+            {/* Sub-copy — high contrast, limited width, generous line height */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
-              className="text-primary-gray/70 text-base md:text-lg font-light leading-relaxed max-w-lg mb-12"
+              transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+              className="text-white/75 text-sm md:text-[15px] font-light leading-[2] max-w-[340px] mb-10 tracking-wide"
             >
               A premium residential &amp; commercial township designed for those who believe where you live defines how you live.
             </motion.p>
 
-            {/* CTAs */}
+            {/* CTAs — taller, stronger horizontal padding, smooth hover */}
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.9, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="flex flex-wrap items-center gap-4"
+              transition={{ duration: 0.9, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
+              className="flex flex-row items-center gap-5"
             >
-              <Button variant="gold" size="lg">Book Site Visit</Button>
-              <Button variant="outline" size="lg">Explore Project</Button>
+              <Button
+                variant="gold"
+                size="lg"
+                className="px-10 py-5 text-[11px] tracking-[0.2em] uppercase transition-all duration-300"
+              >
+                Book Site Visit
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                className="px-10 py-5 text-[11px] tracking-[0.2em] uppercase transition-all duration-300"
+              >
+                Explore Project
+              </Button>
             </motion.div>
           </div>
         </div>
