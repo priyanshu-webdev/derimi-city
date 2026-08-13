@@ -10,9 +10,9 @@ interface SectionProps extends React.HTMLAttributes<HTMLElement> {
 }
 
 const containerMap: Record<SectionVariant, string> = {
-  default: "container mx-auto px-6 md:px-12 max-w-6xl",
-  wide:    "container mx-auto px-6 md:px-12 max-w-7xl",
-  full:    "w-full px-6 md:px-12",
+  default: "container mx-auto px-6 md:px-12 lg:px-16 max-w-6xl",
+  wide:    "container mx-auto px-6 md:px-12 lg:px-16 max-w-7xl",
+  full:    "w-full px-6 md:px-12 lg:px-16",
   flush:   "w-full",
 }
 

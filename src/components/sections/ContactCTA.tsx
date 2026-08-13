@@ -13,10 +13,10 @@ export function ContactCTA() {
       {/* Subtle warm radial glow */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_120%,rgba(184,149,42,0.07),transparent)]" />
 
-      <div className="container mx-auto px-6 md:px-12 max-w-6xl py-32 md:py-40 relative z-10">
+      <div className="container mx-auto px-6 md:px-12 lg:px-16 max-w-6xl py-32 md:py-40 relative z-10">
         <FadeUp>
           {/* Eyebrow */}
-          <div className="flex items-center gap-3 mb-10">
+          <div className="flex items-center gap-3 mb-8">
             <div className="w-8 h-px bg-primary-gold/50" />
             <span className="text-[10px] tracking-[0.25em] uppercase text-primary-gold/70 font-light">
               Take The First Step
@@ -34,7 +34,7 @@ export function ContactCTA() {
           </h2>
 
           {/* 4A: Raised from /50 → /70 for WCAG AA compliance */}
-          <p className="text-primary-gray/70 text-base font-light leading-relaxed max-w-xl mb-14">
+          <p className="text-primary-gray/70 text-base font-light leading-relaxed max-w-xl mb-12">
             Take the first step towards a luxurious and secure future at Derimi City. Our team is ready to guide you through every detail — from site visits to full documentation support.
           </p>
 

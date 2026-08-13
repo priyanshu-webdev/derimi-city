@@ -63,7 +63,7 @@ export function WhyChoose() {
   return (
     <Section id="why" variant="wide" className="bg-primary-black">
       {/* Header */}
-      <FadeUp className="mb-20">
+      <FadeUp className="mb-14">
         {/* Style B eyebrow: no gold line — intentional variation from About/Amenities */}
         <span className="text-[10px] tracking-[0.3em] uppercase text-primary-gold/60 font-light block mb-5">
           Why Choose Derimi City
@@ -80,7 +80,7 @@ export function WhyChoose() {
       </FadeUp>
 
       {/* Two-column editorial list */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-20 gap-y-0">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-0">
         {/* Left column */}
         <StaggerContainer>
           {left.map((f) => (

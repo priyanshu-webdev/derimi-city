@@ -15,9 +15,8 @@ const stats = [
 
 export function About() {
   return (
-    // 8B: explicit pb-16 so the absolute-positioned floating card doesn't bleed into next section
-    <Section id="about" variant="wide" className="bg-primary-black overflow-hidden pb-16 lg:pb-24">
-      <div className="grid grid-cols-1 lg:grid-cols-[55%_1fr] gap-12 lg:gap-20 items-center">
+    <Section id="about" variant="wide" className="bg-primary-black overflow-hidden">
+      <div className="grid grid-cols-1 lg:grid-cols-[52%_1fr] gap-12 lg:gap-16 items-center">
 
         {/* === Left: Image Column === */}
         {/* 9C: explicit 'relative' on the wrapper ensures floating card positions correctly */}
@@ -56,7 +55,7 @@ export function About() {
 
           {/* Section eyebrow */}
           <StaggerItem>
-            <div className="flex items-center gap-3 mb-10">
+            <div className="flex items-center gap-3 mb-8">
               <div className="w-8 h-px bg-primary-gold/50" />
               <span className="text-[10px] tracking-[0.25em] uppercase text-primary-gold/70 font-light">
                 About the Project
@@ -66,7 +65,7 @@ export function About() {
 
           {/* Heading */}
           <StaggerItem>
-            <h2 className="font-serif text-4xl md:text-5xl text-primary-white leading-[1.1] mb-8 text-balance">
+            <h2 className="font-serif text-4xl md:text-5xl text-primary-white leading-[1.1] mb-6 text-balance">
               A Vision of{" "}
               <span className="text-primary-gold font-light italic">Modern Living</span>
               {" "}at Bishunpura,{" "}
@@ -88,16 +87,16 @@ export function About() {
 
           {/* Stats — 8C: grid-cols-2 md:grid-cols-4 so labels never get crushed on small screens */}
           <StaggerItem>
-            <div className="gold-rule-left mb-10" />
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
+            <div className="gold-rule-left mb-8" />
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
               {stats.map((s, i) => (
                 <div key={i} className="flex flex-col">
                   <span className="font-serif text-2xl md:text-3xl text-primary-white font-medium">{s.value}</span>
-                  <span className="text-[9px] tracking-[0.15em] uppercase text-primary-gray/50 mt-1.5 font-light leading-tight">{s.label}</span>
+                  <span className="text-[9px] tracking-[0.15em] uppercase text-primary-gray/50 mt-2 font-light leading-tight">{s.label}</span>
                 </div>
               ))}
             </div>
-            <div className="gold-rule-left mb-10" />
+            <div className="gold-rule-left mb-8" />
           </StaggerItem>
 
           <StaggerItem>

@@ -15,7 +15,7 @@ const connectivity = [
 
 export function Location() {
   return (
-    <Section id="location" variant="wide" className="bg-primary-charcoal overflow-hidden">
+    <Section id="location" variant="wide" className="bg-primary-charcoal overflow-hidden pb-16 md:pb-20">
       <div className="grid grid-cols-1 lg:grid-cols-[40%_1fr] gap-12 lg:gap-16 items-start">
 
           {/* === Left Text Column === */}
@@ -74,7 +74,7 @@ export function Location() {
           <FadeUp delay={0.2} className="order-1 lg:order-2 h-[400px] lg:h-[640px] rounded-sm overflow-hidden relative">
             <div className="absolute inset-0 ring-1 ring-inset ring-white/[0.06] rounded-sm z-10 pointer-events-none" />
             <iframe
-              src="https://maps.google.com/maps?q=25.9010498,85.0099268&t=&z=17&ie=UTF8&iwloc=&output=embed"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3596.5!2d85.00992683769!3d25.90104975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1722000000000!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{

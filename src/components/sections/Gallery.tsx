@@ -49,7 +49,7 @@ export function Gallery() {
   return (
     <Section id="gallery" variant="wide" className="bg-primary-black">
       {/* Header — 6A: Plain label variant (no gold line) to break eyebrow pattern uniformity */}
-      <FadeUp className="mb-16 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
+      <FadeUp className="mb-14 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
         <div>
           {/* Style B eyebrow: no line, slightly different weight */}
           <span className="text-[10px] tracking-[0.3em] uppercase text-primary-gold/60 font-light block mb-5">
@@ -67,7 +67,7 @@ export function Gallery() {
 
       {/* 3E + 5A: figure/figcaption for accessibility; mobile is 2-col to preserve asymmetry intent */}
       <FadeUp delay={0.15}>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
           {images.map((img, i) => (
             <figure
               key={i}
