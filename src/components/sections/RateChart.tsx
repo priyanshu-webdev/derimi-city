@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 
 // ── Brochure URL ───────────────────────────────────────────────────────────
 // Set this to the path of the brochure PDF once it is available, e.g. "/brochure.pdf"
-const BROCHURE_URL: string | null = "/derimi-city-brochure.pdf";
+const BROCHURE_URL: string | null = "/brochure.pdf";
 
 const rates = [
   { area: "600 Sqft",  dims: "20 × 30",    rate: "₹1,751",  price: "₹10,50,600", popular: false },

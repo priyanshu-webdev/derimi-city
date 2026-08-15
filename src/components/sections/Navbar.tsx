@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 
 // ── Brochure URL ───────────────────────────────────────────────────────────
 // Set this to the path of the brochure PDF once it is available, e.g. "/brochure.pdf"
-const BROCHURE_URL: string | null = "/derimi-city-brochure.pdf";
+const BROCHURE_URL: string | null = "/brochure.pdf";
 
 const navLinks = [
   { name: "Home",       href: "#home",      sectionId: "home"      },
