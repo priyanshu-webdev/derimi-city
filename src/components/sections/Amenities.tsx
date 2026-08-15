@@ -43,7 +43,7 @@ function AmenityCard({
   tag: string;
 }) {
   return (
-    <div className="group relative flex flex-col justify-end overflow-hidden rounded-2xl md:rounded-3xl bg-primary-black border border-primary-gold/15 hover:border-primary-gold/40 transition-all duration-700 hover:shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_30px_rgba(184,149,42,0.15)] h-[400px] sm:h-[440px] lg:h-[480px] w-full cursor-pointer grain">
+    <div className="group relative flex flex-col justify-end overflow-hidden rounded-2xl md:rounded-3xl bg-primary-black border border-primary-gold/15 hover:border-primary-gold/40 transition-all duration-700 hover:shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_30px_rgba(184,149,42,0.15)] h-[360px] sm:h-[440px] lg:h-[480px] w-full cursor-pointer grain">
       {/* Image with smooth zoom and superior object cropping */}
       <Image
         src={img}
@@ -90,7 +90,7 @@ export function Amenities() {
   return (
     <Section id="amenities" variant="wide" className="bg-primary-charcoal">
       {/* Section Header */}
-      <FadeUp className="mb-14">
+      <FadeUp className="mb-10 md:mb-14">
         <div className="flex items-center gap-3 mb-6">
           <div className="w-8 h-px bg-primary-gold/50" />
           <span className="text-[10px] tracking-[0.25em] uppercase text-primary-gold/70 font-light">

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -77,26 +78,19 @@ export function Navbar() {
           <div className="flex items-center justify-between">
 
             {/* Logo */}
-            <a href="#home" className="flex items-center gap-3.5 group shrink-0" aria-label="Derimi City Home">
-              {/* Monogram */}
-              <div className={cn(
-                "w-10 h-10 rounded-full flex items-center justify-center shrink-0",
-                "border border-primary-gold/30 group-hover:border-primary-gold/70",
-                "bg-primary-gold/5 group-hover:bg-primary-gold/10",
-                "transition-all duration-500",
-                "shadow-[0_0_12px_rgba(184,149,42,0.08)] group-hover:shadow-[0_0_20px_rgba(184,149,42,0.2)]"
-              )}>
-                <span className="font-serif font-medium text-base text-primary-gold tracking-tighter">DE</span>
-              </div>
-              {/* Wordmark */}
-              <div className="flex flex-col leading-none">
-                <span className="font-serif font-semibold text-xl text-primary-white tracking-[0.12em] leading-none">
-                  DERIMI <span className="text-primary-gold font-light">CITY</span>
-                </span>
-                <span className="text-[9px] uppercase tracking-[0.22em] text-primary-gray/40 mt-1 font-light">
-                  Derimi Estate Pvt. Ltd.
-                </span>
-              </div>
+            <a
+              href="#home"
+              className="flex items-center shrink-0 group transition-opacity duration-300 hover:opacity-90"
+              aria-label="Derimi Estates Pvt. Ltd. — Home"
+            >
+              <Image
+                src="/derimi-logo.png"
+                alt="Derimi Estates Pvt. Ltd. — Building India's Future"
+                width={160}
+                height={160}
+                className="h-10 md:h-11 w-auto object-contain select-none"
+                priority
+              />
             </a>
 
             {/* Desktop Nav */}

@@ -132,7 +132,7 @@ export default function RootLayout({
   return (
     <html
       lang="en-IN"
-      className={`${inter.variable} ${playfair.variable} h-full antialiased scroll-smooth`}
+      className={`${inter.variable} ${playfair.variable} antialiased scroll-smooth`}
     >
       <head>
         <script
@@ -140,7 +140,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-full flex flex-col font-sans bg-primary-black text-primary-white">
+      <body className="flex flex-col font-sans bg-primary-black text-primary-white">
         {children}
         <FloatingWhatsApp />
       </body>

@@ -25,7 +25,7 @@ export function FadeUp({ children, delay = 0, duration = 1.1, className = "" }: 
     <motion.div
       initial={{ opacity: 0, y: 22 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
+      viewport={{ once: true, margin: "0px" }}
       transition={{ duration, delay, ease }}
       className={className}
     >
@@ -42,7 +42,7 @@ export function FadeIn({ children, delay = 0, duration = 1.3, className = "" }: 
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      viewport={{ once: true, margin: "-60px" }}
+      viewport={{ once: true, margin: "0px" }}
       transition={{ duration, delay, ease }}
       className={className}
     >
@@ -70,13 +70,13 @@ export function ImageReveal({
       className={`overflow-hidden ${className}`}
       initial={{ clipPath: "inset(0 100% 0 0)" }}
       whileInView={{ clipPath: "inset(0 0% 0 0)" }}
-      viewport={{ once: true, margin: "-60px" }}
+      viewport={{ once: true, margin: "0px" }}
       transition={{ duration: 1.2, delay, ease: easeReveal }}
     >
       <motion.div
         initial={{ scale: 1.08 }}
         whileInView={{ scale: 1 }}
-        viewport={{ once: true, margin: "-60px" }}
+        viewport={{ once: true, margin: "0px" }}
         transition={{ duration: 1.6, delay, ease: easeReveal }}
       >
         {children}
@@ -118,7 +118,7 @@ export function StaggerContainer({
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-80px" }}
+      viewport={{ once: true, margin: "0px" }}
       variants={containerVariants}
       className={className}
     >

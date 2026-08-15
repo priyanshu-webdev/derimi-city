@@ -24,7 +24,7 @@ export function Section({
   ...props
 }: SectionProps) {
   return (
-    <section className={cn("py-24 md:py-32 relative", className)} {...props}>
+    <section className={cn("py-16 md:py-32 relative", className)} {...props}>
       <div className={cn(containerMap[variant], "relative z-10", containerClassName)}>
         {children}
       </div>

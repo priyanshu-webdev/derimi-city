@@ -45,7 +45,7 @@ export function Footer() {
 
       {/* === Newsletter Banner === */}
       <div className="border-b border-white/[0.04]">
-        <div className="container mx-auto px-6 md:px-12 max-w-7xl py-10">
+        <div className="container mx-auto px-6 md:px-12 max-w-7xl py-8 md:py-10">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <div className="max-w-sm">
               <p className="font-serif text-lg text-primary-white mb-1">Stay Updated</p>
@@ -53,7 +53,7 @@ export function Footer() {
                 Get exclusive project updates, offers, and real estate insights from Derimi Estate.
               </p>
             </div>
-            <form className="flex w-full md:w-auto gap-3 max-w-md" onSubmit={(e) => e.preventDefault()}>
+            <form className="flex flex-col sm:flex-row w-full sm:w-auto gap-3 max-w-md" onSubmit={(e) => e.preventDefault()}>
               <input
                 type="email"
                 placeholder="Your email address"
@@ -72,7 +72,7 @@ export function Footer() {
       </div>
 
       {/* === Main Footer Grid === */}
-      <div className="container mx-auto px-6 md:px-12 max-w-7xl py-20">
+      <div className="container mx-auto px-6 md:px-12 max-w-7xl py-12 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr] gap-12 lg:gap-16">
 
           {/* Brand Column */}
@@ -176,31 +176,21 @@ export function Footer() {
         </div>
       </div>
 
-      {/* === Brand Statement + Bottom Bar === */}
-      <div className="border-t border-white/[0.04]">
-        {/* Large brand statement */}
-        <div className="container mx-auto px-6 md:px-12 max-w-7xl py-10 overflow-hidden">
-          <p
-            className="font-serif font-light text-primary-white/[0.04] text-[clamp(2rem,8vw,7rem)] leading-none tracking-tight select-none whitespace-nowrap"
-            aria-hidden="true"
-          >
-            DERIMI ESTATE PVT. LTD.
+      {/* === Bottom Brand Bar === */}
+      <div className="border-t border-white/[0.05]">
+        <div className="container mx-auto px-6 md:px-12 max-w-7xl py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+          {/* Legal line */}
+          <p className="text-[11px] tracking-[0.12em] text-primary-gray/40 font-light uppercase text-center sm:text-left">
+            © 2026 Derimi Estates Pvt. Ltd. All Rights Reserved.
           </p>
-        </div>
-      </div>
-
-      {/* === Copyright Bar === */}
-      <div className="border-t border-white/[0.03] bg-primary-black/30">
-        <div className="container mx-auto px-6 md:px-12 max-w-7xl py-5 flex flex-col md:flex-row items-center justify-between gap-3">
+          {/* Location */}
           <p className="text-[11px] text-primary-gray/25 font-light">
-            © {new Date().getFullYear()} Derimi Estate Pvt. Ltd. All rights reserved.
-          </p>
-          <p className="text-[11px] text-primary-gray/20 font-light">
             Bishunpura, Parsa Saran, Bihar
           </p>
+          {/* Back to top */}
           <a
             href="#home"
-            className="text-[11px] text-primary-gray/25 hover:text-primary-gold/60 font-light tracking-[0.1em] uppercase transition-colors duration-300"
+            className="text-[11px] text-primary-gray/30 hover:text-primary-gold/70 font-light tracking-[0.12em] uppercase transition-colors duration-300"
           >
             Back to Top ↑
           </a>

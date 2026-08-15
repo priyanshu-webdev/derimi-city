@@ -13,7 +13,7 @@ export function ContactCTA() {
       {/* Subtle warm radial glow */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_120%,rgba(184,149,42,0.07),transparent)]" />
 
-      <div className="container mx-auto px-6 md:px-12 lg:px-16 max-w-6xl py-32 md:py-40 relative z-10">
+      <div className="container mx-auto px-6 md:px-12 lg:px-16 max-w-6xl py-20 md:py-40 relative z-10">
         <FadeUp>
           {/* Eyebrow */}
           <div className="flex items-center gap-3 mb-8">
@@ -26,7 +26,7 @@ export function ContactCTA() {
           {/* Large editorial heading */}
           <h2
             id="contact-heading"
-            className="font-serif font-light text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-primary-white leading-[1.05] mb-8 max-w-4xl text-balance"
+            className="font-serif font-light text-[2rem] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-primary-white leading-[1.05] mb-6 max-w-4xl text-balance"
           >
             Book Your{" "}
             <span className="text-primary-gold italic">Dream Plot</span>
@@ -39,7 +39,7 @@ export function ContactCTA() {
           </p>
 
           {/* CTAs — 3C: Phone button now links to tel: */}
-          <div className="flex flex-wrap items-center gap-5 mb-16">
+          <div className="flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center gap-4 mb-10 md:mb-16">
             <Button variant="gold" size="lg" className="h-14 px-12">
               Schedule a Site Visit
             </Button>

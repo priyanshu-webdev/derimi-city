@@ -15,12 +15,12 @@ const stats = [
 
 export function About() {
   return (
-    <Section id="about" variant="wide" className="bg-primary-black overflow-hidden">
+    <Section id="about" variant="wide" className="bg-primary-black">
       <div className="grid grid-cols-1 lg:grid-cols-[52%_1fr] gap-12 lg:gap-16 items-center">
 
         {/* === Left: Image Column === */}
         {/* 9C: explicit 'relative' on the wrapper ensures floating card positions correctly */}
-        <div className="relative order-2 lg:order-1">
+        <div className="relative order-2 lg:order-1 pb-10 lg:pb-0">
           <FadeUp>
             {/* Main image */}
             <ImageReveal delay={0.1}>
@@ -37,7 +37,7 @@ export function About() {
 
             {/* Floating accent card — levitation animation */}
             <motion.div 
-              className="absolute -bottom-6 right-0 lg:-right-8 bg-primary-charcoal/90 border border-white/[0.08] p-6 rounded-sm shadow-2xl w-48 backdrop-blur-md"
+              className="absolute -bottom-6 right-2 lg:-right-8 bg-primary-charcoal/90 border border-white/[0.08] p-5 rounded-sm shadow-2xl w-44 backdrop-blur-md"
               animate={{ y: [0, -6, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
             >
@@ -45,8 +45,8 @@ export function About() {
               <div className="text-[10px] tracking-[0.18em] uppercase text-primary-gray/60 font-light">Years of trusted excellence</div>
             </motion.div>
 
-            {/* Decorative gold line */}
-            <div className="absolute top-8 -left-4 lg:-left-8 w-px h-32 bg-gradient-to-b from-transparent via-primary-gold/40 to-transparent" />
+            {/* Decorative gold line — hidden on mobile to prevent left-bleed scroll trigger */}
+            <div className="absolute top-8 -left-4 lg:-left-8 w-px h-32 bg-gradient-to-b from-transparent via-primary-gold/40 to-transparent hidden lg:block" />
           </FadeUp>
         </div>
 
@@ -87,8 +87,8 @@ export function About() {
 
           {/* Stats — 8C: grid-cols-2 md:grid-cols-4 so labels never get crushed on small screens */}
           <StaggerItem>
-            <div className="gold-rule-left mb-8" />
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+            <div className="gold-rule-left mb-6 md:mb-8" />
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-6 md:mb-8">
               {stats.map((s, i) => (
                 <div key={i} className="flex flex-col">
                   <span className="font-serif text-2xl md:text-3xl text-primary-white font-medium">{s.value}</span>

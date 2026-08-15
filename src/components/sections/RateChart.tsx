@@ -18,7 +18,7 @@ export function RateChart() {
   return (
     <Section id="rates" variant="wide" className="bg-primary-charcoal">
       {/* Header */}
-      <FadeUp className="mb-14">
+      <FadeUp className="mb-10 md:mb-14">
         <div className="flex items-center gap-3 mb-6">
           <div className="w-8 h-px bg-primary-gold/50" />
           <span className="text-[10px] tracking-[0.25em] uppercase text-primary-gold/70 font-light">
@@ -150,7 +150,7 @@ export function RateChart() {
       </StaggerContainer>
 
       {/* Footer note */}
-      <FadeUp delay={0.4} className="mt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <FadeUp delay={0.4} className="mt-6 md:mt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <p className="text-[11px] text-primary-gray/40 font-light">
           * All prices are indicative. Contact our team for final quotation and payment plan details.
         </p>

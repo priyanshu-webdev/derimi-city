@@ -32,7 +32,7 @@ export function Location() {
                 <span className="text-primary-gold font-light italic">Bishunpura</span>,{" "}
                 <span className="text-primary-white/60 font-light">Parsa Saran</span>
               </h2>
-              <p className="text-primary-gray/50 text-sm font-light leading-[1.9] mb-12 max-w-sm">
+              <p className="text-primary-gray/50 text-sm font-light leading-[1.9] mb-8 md:mb-12 max-w-sm">
                 Derimi City is strategically positioned for convenient access to essential services while retaining a tranquil, nature-forward environment.
               </p>
             </FadeUp>
@@ -71,7 +71,7 @@ export function Location() {
           </div>
 
           {/* === Right Map Column — 60% === */}
-          <FadeUp delay={0.2} className="order-1 lg:order-2 h-[400px] lg:h-[640px] rounded-sm overflow-hidden relative">
+          <FadeUp delay={0.2} className="order-1 lg:order-2 h-[320px] md:h-[400px] lg:h-[640px] rounded-sm overflow-hidden relative">
             <div className="absolute inset-0 ring-1 ring-inset ring-white/[0.06] rounded-sm z-10 pointer-events-none" />
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3596.5!2d85.00992683769!3d25.90104975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1722000000000!5m2!1sen!2sin"

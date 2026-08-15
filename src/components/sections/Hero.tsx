@@ -23,7 +23,7 @@ export function Hero() {
     <section
       id="home"
       ref={ref}
-      className="relative min-h-screen h-[100svh] min-h-[760px] max-h-[1100px] overflow-hidden flex flex-col"
+      className="relative min-h-[100svh] min-h-[760px] flex flex-col"
       aria-label="Hero"
     >
       {/* === Background === */}
@@ -51,11 +51,11 @@ export function Hero() {
 
       {/* === Main Content === */}
       <motion.div
-        className="relative z-10 flex-1 flex flex-col justify-center"
+        className="relative z-10 flex-1 min-h-0 flex flex-col justify-center"
         style={{ y: contentY, opacity }}
       >
         {/* Indented to move content away from left edge */}
-        <div className="container mx-auto px-8 md:px-16 lg:px-24 max-w-7xl pt-24">
+        <div className="container mx-auto px-8 md:px-16 lg:px-24 max-w-7xl pt-24 pb-10">
           <div className="max-w-2xl xl:max-w-3xl">
 
             {/* Eyebrow */}
@@ -101,7 +101,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
-              className="flex flex-row items-center gap-5"
+              className="flex flex-col sm:flex-row items-start sm:items-center gap-4"
             >
               <Button
                 variant="gold"
