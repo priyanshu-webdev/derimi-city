@@ -6,6 +6,10 @@ import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
+// ── Brochure URL ───────────────────────────────────────────────────────────
+// Set this to the path of the brochure PDF once it is available, e.g. "/brochure.pdf"
+const BROCHURE_URL: string | null = "/derimi-city-brochure.pdf";
+
 const navLinks = [
   { name: "Home",       href: "#home",      sectionId: "home"      },
   { name: "About",      href: "#about",     sectionId: "about"     },
@@ -124,11 +128,24 @@ export function Navbar() {
                 variant="outline"
                 size="sm"
                 className="text-[10px] tracking-widest border-primary-gold/40 text-primary-gold/80 hover:border-primary-gold hover:text-primary-gold hover:bg-primary-gold/5 transition-all duration-300"
+                asChild
               >
-                Download Brochure
+                {BROCHURE_URL ? (
+                  <a href={BROCHURE_URL} download="Derimi-City-Brochure.pdf" aria-label="Download Derimi City Brochure">
+                    Download Brochure
+                  </a>
+                ) : (
+                  <a
+                    href="#contact"
+                    title="Brochure coming soon — contact us to receive it"
+                    aria-label="Request brochure — contact us"
+                  >
+                    Download Brochure
+                  </a>
+                )}
               </Button>
-              <Button variant="gold" size="sm">
-                Book Site Visit
+              <Button variant="gold" size="sm" asChild>
+                <a href="#contact">Book Site Visit</a>
               </Button>
             </div>
 
@@ -206,8 +223,26 @@ export function Navbar() {
 
           {/* Drawer Footer CTAs */}
           <div className="px-8 py-8 border-t border-white/[0.06] flex flex-col gap-3">
-            <Button variant="gold" className="w-full">Book Site Visit</Button>
-            <Button variant="outline" className="w-full">Download Brochure</Button>
+            <Button variant="gold" className="w-full" asChild>
+              <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>
+                Book Site Visit
+              </a>
+            </Button>
+            <Button variant="outline" className="w-full" asChild>
+              {BROCHURE_URL ? (
+                <a href={BROCHURE_URL} download="Derimi-City-Brochure.pdf" aria-label="Download Derimi City Brochure">
+                  Download Brochure
+                </a>
+              ) : (
+                <a
+                  href="#contact"
+                  title="Brochure coming soon — contact us to receive it"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Download Brochure
+                </a>
+              )}
+            </Button>
           </div>
         </div>
       </div>

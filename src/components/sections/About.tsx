@@ -100,7 +100,9 @@ export function About() {
           </StaggerItem>
 
           <StaggerItem>
-            <Button variant="gold" size="lg">Discover More</Button>
+            <Button variant="gold" size="lg" asChild>
+              <a href="#amenities">Discover More</a>
+            </Button>
           </StaggerItem>
 
         </StaggerContainer>

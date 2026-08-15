@@ -107,15 +107,17 @@ export function Hero() {
                 variant="gold"
                 size="lg"
                 className="px-10 py-5 text-[11px] tracking-[0.2em] uppercase transition-all duration-300"
+                asChild
               >
-                Book Site Visit
+                <a href="#contact">Book Site Visit</a>
               </Button>
               <Button
                 variant="outline"
                 size="lg"
                 className="px-10 py-5 text-[11px] tracking-[0.2em] uppercase transition-all duration-300"
+                asChild
               >
-                Explore Project
+                <a href="#amenities">Explore Project</a>
               </Button>
             </motion.div>
           </div>

@@ -5,6 +5,10 @@ import { FadeUp, StaggerContainer, StaggerItem } from "@/components/animations/F
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
+// ── Brochure URL ───────────────────────────────────────────────────────────
+// Set this to the path of the brochure PDF once it is available, e.g. "/brochure.pdf"
+const BROCHURE_URL: string | null = "/derimi-city-brochure.pdf";
+
 const rates = [
   { area: "600 Sqft",  dims: "20 × 30",    rate: "₹1,751",  price: "₹10,50,600", popular: false },
   { area: "1200 Sqft", dims: "30 × 40",    rate: "₹1,751",  price: "₹21,01,200", popular: false },
@@ -100,8 +104,9 @@ export function RateChart() {
                       size="sm"
                       className="opacity-60 group-hover:opacity-100 transition-opacity"
                       aria-label={`Book ${r.area} plot at ${r.price}`}
+                      asChild
                     >
-                      Book
+                      <a href="#contact">Book</a>
                     </Button>
                   </td>
                 </tr>
@@ -141,8 +146,9 @@ export function RateChart() {
                 size="sm"
                 className="w-full"
                 aria-label={`Book ${r.area} plot at ${r.price}`}
+                asChild
               >
-                Book Now
+                <a href="#contact">Book Now</a>
               </Button>
             </div>
           </StaggerItem>
@@ -154,7 +160,21 @@ export function RateChart() {
         <p className="text-[11px] text-primary-gray/40 font-light">
           * All prices are indicative. Contact our team for final quotation and payment plan details.
         </p>
-        <Button variant="outline" size="sm">Download Full Brochure</Button>
+        <Button variant="outline" size="sm" asChild>
+          {BROCHURE_URL ? (
+            <a href={BROCHURE_URL} download="Derimi-City-Brochure.pdf" aria-label="Download Derimi City Brochure">
+              Download Full Brochure
+            </a>
+          ) : (
+            <a
+              href="#contact"
+              title="Brochure coming soon — contact us to receive it"
+              aria-label="Request brochure — contact us"
+            >
+              Download Full Brochure
+            </a>
+          )}
+        </Button>
       </FadeUp>
     </Section>
   );

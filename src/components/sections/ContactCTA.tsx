@@ -1,8 +1,8 @@
 import { FadeUp } from "@/components/animations/FadeUp";
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
+import { ContactForm } from "@/components/sections/ContactForm";
 
-// 9A: Server component — no client-side logic needed
 export function ContactCTA() {
   return (
     <section
@@ -38,10 +38,11 @@ export function ContactCTA() {
             Take the first step towards a luxurious and secure future at Derimi City. Our team is ready to guide you through every detail — from site visits to full documentation support.
           </p>
 
-          {/* CTAs — 3C: Phone button now links to tel: */}
+          {/* CTAs */}
           <div className="flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center gap-4 mb-10 md:mb-16">
-            <Button variant="gold" size="lg" className="h-14 px-12">
-              Schedule a Site Visit
+            {/* Scrolls to the enquiry form just below */}
+            <Button variant="gold" size="lg" className="h-14 px-12" asChild>
+              <a href="#enquiry-form">Schedule a Site Visit</a>
             </Button>
             <Button
               variant="outline"
@@ -73,6 +74,11 @@ export function ContactCTA() {
                 dhrimiestate@gmail.com
               </a>
             </div>
+          </div>
+
+          {/* Enquiry form — anchored so "Schedule a Site Visit" scrolls here */}
+          <div id="enquiry-form">
+            <ContactForm />
           </div>
         </FadeUp>
       </div>
