@@ -68,10 +68,10 @@ export function ContactCTA() {
             <div className="flex flex-col gap-1">
               <span className="text-[9px] tracking-[0.2em] uppercase text-primary-gray/40 font-light">Email</span>
               <a
-                href="mailto:dhrimiestate@gmail.com"
+                href="mailto:derimiestates@gmail.com"
                 className="text-[12px] text-primary-gold/70 hover:text-primary-gold transition-colors duration-300 font-light"
               >
-                dhrimiestate@gmail.com
+                derimiestates@gmail.com
               </a>
             </div>
           </div>

@@ -29,9 +29,9 @@ export const metadata: Metadata = {
     template: "%s | Derimi City",
   },
   description:
-    "Derimi City is a Premium Township in Bishunpura by Derimi Estate Pvt. Ltd. Offering luxury residential plots in Parsa Saran, Bihar with world-class amenities.",
+    "Derimi City is a Premium Township in Bishunpura by DERIMI ESTATES PVT. LTD. Offering luxury residential plots in Parsa Saran, Bihar with world-class amenities.",
   keywords: [
-    "Derimi Estate Pvt. Ltd.",
+    "DERIMI ESTATES PVT. LTD.",
     "Derimi City",
     "Premium Township in Bishunpura",
     "Residential Plots in Parsa Saran",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     siteName: "Derimi City",
     title: "Derimi City | Luxury Township Bihar",
     description:
-      "A Premium Township in Bishunpura. Discover premium residential plots in Parsa Saran by Derimi Estate Pvt. Ltd.",
+      "A Premium Township in Bishunpura. Discover premium residential plots in Parsa Saran by DERIMI ESTATES PVT. LTD.",
     images: [
       {
         url: "/og-image.jpg",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Derimi City | Premium Township in Bishunpura",
     description:
-      "Luxury Township Bihar featuring exclusive residential plots in Parsa Saran by Derimi Estate Pvt. Ltd.",
+      "Luxury Township Bihar featuring exclusive residential plots in Parsa Saran by DERIMI ESTATES PVT. LTD.",
     images: ["/og-image.jpg"],
   },
   robots: {
@@ -77,12 +77,12 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": ["RealEstateAgent", "Organization"],
-  name: "Derimi Estate Pvt. Ltd.",
+  name: "DERIMI ESTATES PVT. LTD.",
   alternateName: "Derimi City",
   url: siteUrl,
   logo: `${siteUrl}/logo.png`,
   description:
-    "Derimi City is a Premium Township in Bishunpura offering luxury residential plots in Parsa Saran, Bihar. Developed by Derimi Estate Pvt. Ltd.",
+    "Derimi City is a Premium Township in Bishunpura offering luxury residential plots in Parsa Saran, Bihar. Developed by DERIMI ESTATES PVT. LTD.",
   address: {
     "@type": "PostalAddress",
     streetAddress: "Bishunpura, Parsa Saran",

@@ -85,11 +85,11 @@ export function Navbar() {
             <a
               href="#home"
               className="flex items-center shrink-0 group transition-opacity duration-300 hover:opacity-90"
-              aria-label="Derimi Estates Pvt. Ltd. — Home"
+              aria-label="DERIMI ESTATES PVT. LTD. — Home"
             >
               <Image
                 src="/derimi-logo.png"
-                alt="Derimi Estates Pvt. Ltd. — Building India's Future"
+                alt="DERIMI ESTATES PVT. LTD. — Building India's Future"
                 width={160}
                 height={160}
                 className="h-10 md:h-11 w-auto object-contain select-none"

@@ -58,11 +58,14 @@
     scroll-behavior: smooth;
     /* Offset fixed navbar so anchor targets aren't hidden beneath it */
     scroll-padding-top: 80px;
+    /* Prevent horizontal overflow from wide animated or grid elements */
+    overflow-x: hidden;
   }
 
   body {
     @apply bg-primary-black text-primary-white;
     font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+    overflow-x: hidden;
   }
 
   ::selection {

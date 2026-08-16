@@ -27,7 +27,7 @@ export function About() {
               <div className="relative rounded-sm overflow-hidden aspect-[4/5] max-h-[680px]">
                 <Image
                   src="https://images.unsplash.com/photo-1613545325278-f24b0cae1224?auto=format&fit=crop&w=1200&q=80"
-                  alt="Derimi Estate Pvt. Ltd. - Premium Township in Bishunpura"
+                  alt="DERIMI ESTATES PVT. LTD. - Premium Township in Bishunpura"
                   fill
                   className="object-cover"
                 />
@@ -77,7 +77,7 @@ export function About() {
           <StaggerItem>
             <div className="space-y-5 text-primary-gray/60 text-[15px] leading-[1.8] font-light mb-10 max-w-lg">
               <p>
-                Derimi City by <strong className="text-primary-gray/80 font-normal">Derimi Estate Pvt. Ltd.</strong> is a premium residential and commercial township built to shape Bihar's future. Nestled at Bishunpura, it blends luxury living with nature and world-class infrastructure.
+                Derimi City by <strong className="text-primary-gray/80 font-normal">DERIMI ESTATES PVT. LTD.</strong> is a premium residential and commercial township built to shape Bihar's future. Nestled at Bishunpura, it blends luxury living with nature and world-class infrastructure.
               </p>
               <p>
                 Whether you're building your dream home or securing a high-return commercial investment — Derimi City offers a serene, future-ready environment with excellent connectivity and complete documentation support.
